@@ -1,801 +1,594 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>io.klogging.config</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../scripts/main.js" async="async"></script>  </head>
-  <body>
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-          <div id="logo"></div>
-        </a>
-        <div id="paneSearch"></div>
-        <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <div id="leftToggler"><span class="icon-toggler"></span></div>
-<script type="text/javascript" src="../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="Klogging::io.klogging.config////PointingToDeclaration//1481200572">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../index.html">Klogging</a>/<a href="index.html">io.klogging.config</a></div>
-            <div class="pull-right d-flex">
-              <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":dokkaHtml/commonMain">common</button><button class="platform-tag platform-selector js-like" data-active="" data-filter=":dokkaHtml/jsMain">js</button><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/jvmMain">jvm</button><button class="platform-tag platform-selector native-like" data-active="" data-filter=":dokkaHtml/nativeMain">native</button></div>
-              <div id="searchBar"></div>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    Klogging
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.9.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/commonMain"
+                                       data-filter=":klogging:dokkaHtml/commonMain"/>
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/jvmMain"
+                                       data-filter=":klogging:dokkaHtml/jvmMain"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Klogging
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="Klogging::io.klogging.config////PointingToDeclaration//-722345738">
+  <div class="breadcrumbs"><a href="../../index.html">Klogging</a><span class="delimiter">/</span><span class="current">io.klogging.config</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain" data-active="" data-toggle=":klogging:dokkaHtml/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/jvmMain" data-filterable-set=":klogging:dokkaHtml/jvmMain" data-toggle=":klogging:dokkaHtml/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><p class="paragraph">Klogging configuration, from DSL or JSON files.</p></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/jvmMain"><p class="paragraph">Klogging configuration, from DSL or JSON files.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1983830641%2FClasslikes%2F-972240762" anchor-label="ConfigDsl" id="1983830641%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-config-dsl/index.html"><span>Config</span><wbr></wbr><span><span>Dsl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1983830641%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-dsl-marker/index.html"><span class="token annotation builtin">DslMarker</span></a></div></div><span class="token keyword">annotation class </span><a href="-config-dsl/index.html">ConfigDsl</a></div><div class="brief "><p class="paragraph">Marker annotation for DSL functions.</p></div></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package io.</span><wbr></wbr><span>klogging.</span><wbr></wbr><span>config</span></h1>
-            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><p class="paragraph">Klogging configuration, from DSL or JSON files.</p></div></div>
+<a data-name="1898546834%2FClasslikes%2F-972240762" anchor-label="FileConfiguration" id="1898546834%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-configuration/index.html"><span>File</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1898546834%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-file-configuration/index.html">FileConfiguration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>configName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>kloggingMinLogLevel<span class="token operator">: </span><a href="../io.klogging/-level/index.html">Level</a><span class="token operator"> = </span>defaultKloggingMinLogLevel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>minDirectLogLevel<span class="token operator">: </span><a href="../io.klogging/-level/index.html">Level</a><span class="token operator"> = </span>defaultMinDirectLogLevel<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sinks<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="-file-sink-configuration/index.html">FileSinkConfiguration</a><span class="token operator">&gt;</span><span class="token operator"> = </span>mapOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>logging<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-file-logging-config/index.html">FileLoggingConfig</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>baseContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>mapOf()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Data class for file representation of <a href="-klogging-configuration/index.html">KloggingConfiguration</a>, either in JSON or HOCON format.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Types</h2>
-              <div class="table" data-togglable="Types"><a data-name="1983830641%2FClasslikes%2F788909594" anchor-label="ConfigDsl" id="1983830641%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-config-dsl/index.html">ConfigDsl</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1983830641%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block">@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-dsl-marker/index.html">DslMarker</a>()</div></div>annotation class <a href="-config-dsl/index.html">ConfigDsl</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1983830641%2FClasslikes%2F788909594" anchor-label="ConfigDsl" id="1983830641%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="1983830641%2FClasslikes%2F788909594" anchor-label="ConfigDsl" id="1983830641%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Marker annotation for DSL functions.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="593661182%2FClasslikes%2F788909594" anchor-label="JsonConfiguration" id="593661182%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-json-configuration/index.html">JsonConfiguration</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593661182%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-json-configuration/index.html">JsonConfiguration</a>(configName: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, kloggingMinLogLevel: <a href="../io.klogging/-level/index.html">Level</a>, sinks: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="-json-sink-configuration/index.html">JsonSinkConfiguration</a>&gt;, logging: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-json-logging-config/index.html">JsonLoggingConfig</a>&gt;)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="593661182%2FClasslikes%2F788909594" anchor-label="JsonConfiguration" id="593661182%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="593661182%2FClasslikes%2F788909594" anchor-label="JsonConfiguration" id="593661182%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Data class for JSON representation of <a href="-klogging-configuration/index.html">KloggingConfiguration</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="207912981%2FClasslikes%2F788909594" anchor-label="JsonLevelRange" id="207912981%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-json-level-range/index.html">JsonLevelRange</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="207912981%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-json-level-range/index.html">JsonLevelRange</a>(fromMinLevel: <a href="../io.klogging/-level/index.html">Level</a>?, atLevel: <a href="../io.klogging/-level/index.html">Level</a>?, toSinks: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="207912981%2FClasslikes%2F788909594" anchor-label="JsonLevelRange" id="207912981%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="207912981%2FClasslikes%2F788909594" anchor-label="JsonLevelRange" id="207912981%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Data class for JSON representation of a <a href="-level-range/index.html">LevelRange</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-902468397%2FClasslikes%2F788909594" anchor-label="JsonLoggingConfig" id="-902468397%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-json-logging-config/index.html">JsonLoggingConfig</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-902468397%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-json-logging-config/index.html">JsonLoggingConfig</a>(fromLoggerBase: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, exactLogger: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, levelRanges: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="-json-level-range/index.html">JsonLevelRange</a>&gt;)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-902468397%2FClasslikes%2F788909594" anchor-label="JsonLoggingConfig" id="-902468397%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-902468397%2FClasslikes%2F788909594" anchor-label="JsonLoggingConfig" id="-902468397%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Data class for JSON representation of a <a href="-logging-config/index.html">LoggingConfig</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="789125105%2FClasslikes%2F788909594" anchor-label="JsonSinkConfiguration" id="789125105%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-json-sink-configuration/index.html">JsonSinkConfiguration</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="789125105%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-json-sink-configuration/index.html">JsonSinkConfiguration</a>(renderWith: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, sendTo: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, dispatchTo: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, seqServer: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, splunkServer: <a href="../io.klogging.sending/-splunk-endpoint/index.html">SplunkEndpoint</a>?)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="789125105%2FClasslikes%2F788909594" anchor-label="JsonSinkConfiguration" id="789125105%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="789125105%2FClasslikes%2F788909594" anchor-label="JsonSinkConfiguration" id="789125105%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Data class for JSON representation of a <a href="-sink-configuration/index.html">SinkConfiguration</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-650799574%2FClasslikes%2F788909594" anchor-label="KloggingConfiguration" id="-650799574%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-650799574%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">class <a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-650799574%2FClasslikes%2F788909594" anchor-label="KloggingConfiguration" id="-650799574%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-650799574%2FClasslikes%2F788909594" anchor-label="KloggingConfiguration" id="-650799574%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Klogging configuration for a runtime.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-540702563%2FClasslikes%2F788909594" anchor-label="LevelRange" id="-540702563%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-level-range/index.html">LevelRange</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540702563%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-level-range/index.html">LevelRange</a>(minLevel: <a href="../io.klogging/-level/index.html">Level</a>, maxLevel: <a href="../io.klogging/-level/index.html">Level</a>) : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.ranges/-closed-range/index.html">ClosedRange</a>&lt;<a href="../io.klogging/-level/index.html">Level</a>&gt; <span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-540702563%2FClasslikes%2F788909594" anchor-label="LevelRange" id="-540702563%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-540702563%2FClasslikes%2F788909594" anchor-label="LevelRange" id="-540702563%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Inclusive range of logging levels with the names of sinks where events will be sent.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="857028427%2FClasslikes%2F788909594" anchor-label="LoggingConfig" id="857028427%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-logging-config/index.html">LoggingConfig</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="857028427%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">class <a href="-logging-config/index.html">LoggingConfig</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="857028427%2FClasslikes%2F788909594" anchor-label="LoggingConfig" id="857028427%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="857028427%2FClasslikes%2F788909594" anchor-label="LoggingConfig" id="857028427%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Logging configuration with a logger name match and a list of level ranges that maps to a list of sinks for each.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="898557545%2FClasslikes%2F788909594" anchor-label="SinkConfiguration" id="898557545%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-sink-configuration/index.html">SinkConfiguration</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="898557545%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">class <a href="-sink-configuration/index.html">SinkConfiguration</a>(renderer: <a href="../io.klogging.rendering/index.html#-38488107%2FClasslikes%2F788909594">RenderString</a>, stringSender: <a href="../io.klogging.sending/index.html#-1312105551%2FClasslikes%2F788909594">SendString</a>, eventSender: <a href="../io.klogging.sending/index.html#-2058003031%2FClasslikes%2F788909594">EventSender</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="898557545%2FClasslikes%2F788909594" anchor-label="SinkConfiguration" id="898557545%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="898557545%2FClasslikes%2F788909594" anchor-label="SinkConfiguration" id="898557545%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Configuration of a logging sink, comprising a sender and a renderer.</div></div>
-</div>
-                    </div>
-                  </div>
+<a data-name="-906621183%2FClasslikes%2F-972240762" anchor-label="FileLevelRange" id="-906621183%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-level-range/index.html"><span>File</span><wbr></wbr><span>Level</span><wbr></wbr><span><span>Range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-906621183%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-file-level-range/index.html">FileLevelRange</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fromMinLevel<span class="token operator">: </span><a href="../io.klogging/-level/index.html">Level</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>toMaxLevel<span class="token operator">: </span><a href="../io.klogging/-level/index.html">Level</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>atLevel<span class="token operator">: </span><a href="../io.klogging/-level/index.html">Level</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>toSinks<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Data class for a file representation of a <a href="-level-range/index.html">LevelRange</a>.</p></div></div></div>
                 </div>
               </div>
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="759386795%2FFunctions%2F788909594" anchor-label="configureFromJson" id="759386795%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="configure-from-json.html">configureFromJson</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="759386795%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="configure-from-json.html">configureFromJson</a>(configJson: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="-klogging-configuration/index.html">KloggingConfiguration</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="759386795%2FFunctions%2F788909594" anchor-label="configureFromJson" id="759386795%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="759386795%2FFunctions%2F788909594" anchor-label="configureFromJson" id="759386795%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Load <a href="-klogging-configuration/index.html">KloggingConfiguration</a> from JSON configuration string.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="23502421%2FFunctions%2F788909594" anchor-label="evalEnv" id="23502421%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="eval-env.html">evalEnv</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="23502421%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="eval-env.html">evalEnv</a>(string: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, env: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt; = ENV): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="23502421%2FFunctions%2F788909594" anchor-label="evalEnv" id="23502421%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="23502421%2FFunctions%2F788909594" anchor-label="evalEnv" id="23502421%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Evaluate env vars in a string.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1202077337%2FFunctions%2F1481200572" anchor-label="findJsonConfigText" id="1202077337%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="find-json-config-text.html">findJsonConfigText</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202077337%2FFunctions%2F1481200572"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="find-json-config-text.html">findJsonConfigText</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1202077337%2FFunctions%2F1481200572" anchor-label="findJsonConfigText" id="1202077337%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="1202077337%2FFunctions%2F788909594" anchor-label="findJsonConfigText" id="1202077337%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Find a JSON configuration file and read its contents, if found.</div></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jsMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/jsMain :dokkaHtml/nativeMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":dokkaHtml/jsMain" data-filterable-set=":dokkaHtml/jsMain" data-active="" data-toggle=":dokkaHtml/jsMain">js</button><button class="platform-bookmark native-like" data-filterable-current=":dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/nativeMain" data-toggle=":dokkaHtml/nativeMain">native</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="find-json-config-text.html">findJsonConfigText</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/nativeMain"><div class="symbol monospace">fun <a href="find-json-config-text.html">findJsonConfigText</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
-  </div>
-<a data-name="1202077337%2FFunctions%2F1481200572" anchor-label="findJsonConfigText" id="1202077337%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag jvm-like">jvm</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">fun <a href="find-json-config-text.html">findJsonConfigText</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1202077337%2FFunctions%2F1481200572" anchor-label="findJsonConfigText" id="1202077337%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="1202077337%2FFunctions%2F-879532132" anchor-label="findJsonConfigText" id="1202077337%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Look for the JSON configuration file in one of two places:<ol><li><p class="paragraph">specified by the environment variable <a href="-e-n-v_-k-l-o-g-g-i-n-g_-c-o-n-f-i-g_-j-s-o-n_-p-a-t-h.html">ENV_KLOGGING_CONFIG_JSON_PATH</a>; or</p></li><li><p class="paragraph">called <a href="-j-s-o-n_-c-o-n-f-i-g_-f-i-l-e-n-a-m-e.html">JSON_CONFIG_FILENAME</a> in the classpath.</p></li></ol>If found, return the contents as UTF-8 text; else return <code>null</code>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1509918397%2FFunctions%2F1481200572" anchor-label="getenv" id="-1509918397%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><span data-unresolved-link="io.klogging.config//getenv/#/PointingToDeclaration/">getenv</span><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1509918397%2FFunctions%2F1481200572"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">internal fun <a href="getenv.html">getenv</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="2001478994%2FFunctions%2F1481200572" anchor-label="getenv" id="2001478994%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="2001478994%2FFunctions%2F788909594" anchor-label="getenv" id="2001478994%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>☠️ This function should be <code>private</code>, but as it is implemented in multiplatform, must be <code>internal</code>.</div></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":dokkaHtml/jsMain" data-filterable-set=":dokkaHtml/jsMain" data-active="" data-toggle=":dokkaHtml/jsMain">js</button><button class="platform-bookmark jvm-like" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain" data-toggle=":dokkaHtml/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/nativeMain" data-toggle=":dokkaHtml/nativeMain">native</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jsMain"><div class="symbol monospace">internal fun <a href="getenv.html#2001478994%2FComment%2F371682492">getenv</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">internal fun <a href="getenv.html#2001478994%2FComment%2F-879532132">getenv</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/nativeMain"><div class="symbol monospace">internal fun <a href="getenv.html#2001478994%2FComment%2F-1178245650">getenv</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
-  </div>
-<a data-name="2001478994%2FFunctions%2F1481200572" anchor-label="getenv" id="2001478994%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="getenv.html">getenv</a>(name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1031888654%2FFunctions%2F788909594" anchor-label="getenv" id="-1031888654%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-1031888654%2FFunctions%2F788909594" anchor-label="getenv" id="-1031888654%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Return the value of an item in the running environment, or <code>null</code> if the name is not found.</div></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="getenv.html">getenv</a>(name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, default: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="849769047%2FFunctions%2F788909594" anchor-label="getenv" id="849769047%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="849769047%2FFunctions%2F788909594" anchor-label="getenv" id="849769047%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Return the value of an item in the running environment, or a default value if not found.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="51826560%2FFunctions%2F788909594" anchor-label="getenvBoolean" id="51826560%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="getenv-boolean.html">getenvBoolean</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="51826560%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="getenv-boolean.html">getenvBoolean</a>(name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, default: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="51826560%2FFunctions%2F788909594" anchor-label="getenvBoolean" id="51826560%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="51826560%2FFunctions%2F788909594" anchor-label="getenvBoolean" id="51826560%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Return the value of an item in the running environment as a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>, or a default value if not found.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-913844693%2FFunctions%2F788909594" anchor-label="getenvInt" id="-913844693%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="getenv-int.html">getenvInt</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-913844693%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="getenv-int.html">getenvInt</a>(name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, default: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, minValue: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a> = 1): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-913844693%2FFunctions%2F788909594" anchor-label="getenvInt" id="-913844693%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-913844693%2FFunctions%2F788909594" anchor-label="getenvInt" id="-913844693%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Return the value of an item in the running environment as an <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, or a default value if not found or if the value cannot be parsed as an <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-283760958%2FFunctions%2F788909594" anchor-label="getenvLong" id="-283760958%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="getenv-long.html">getenvLong</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-283760958%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="getenv-long.html">getenvLong</a>(name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, default: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, minValue: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> = 1L): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-283760958%2FFunctions%2F788909594" anchor-label="getenvLong" id="-283760958%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-283760958%2FFunctions%2F788909594" anchor-label="getenvLong" id="-283760958%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Return the value of an item in the running environment as a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, or a default value if not found or if the value cannot be parsed as a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="201502059%2FFunctions%2F788909594" anchor-label="graylog" id="201502059%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="graylog.html">graylog</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="201502059%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="graylog.html">graylog</a>(host: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, port: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, renderer: <a href="../io.klogging.rendering/index.html#-38488107%2FClasslikes%2F788909594">RenderString</a> = RENDER_GELF): <a href="-sink-configuration/index.html">SinkConfiguration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="201502059%2FFunctions%2F788909594" anchor-label="graylog" id="201502059%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="201502059%2FFunctions%2F788909594" anchor-label="graylog" id="201502059%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Sink configuration for a <a href="https://www.graylog.org/">Graylog</a> server.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="545822951%2FFunctions%2F788909594" anchor-label="loggingConfiguration" id="545822951%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="logging-configuration.html">loggingConfiguration</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545822951%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="logging-configuration.html">loggingConfiguration</a>(append: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = false, block: <a href="-klogging-configuration/index.html">KloggingConfiguration</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="545822951%2FFunctions%2F788909594" anchor-label="loggingConfiguration" id="545822951%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="545822951%2FFunctions%2F788909594" anchor-label="loggingConfiguration" id="545822951%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Root DSL function for creating a <a href="-klogging-configuration/index.html">KloggingConfiguration</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-94923565%2FFunctions%2F788909594" anchor-label="readConfig" id="-94923565%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="read-config.html">readConfig</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-94923565%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">internal fun <a href="read-config.html">readConfig</a>(configJson: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="-json-configuration/index.html">JsonConfiguration</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-94923565%2FFunctions%2F788909594" anchor-label="readConfig" id="-94923565%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-94923565%2FFunctions%2F788909594" anchor-label="readConfig" id="-94923565%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Read configuration from JSON into a <a href="-json-configuration/index.html">JsonConfiguration</a> object.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-622291540%2FFunctions%2F-879532132" anchor-label="readResourceText" id="-622291540%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="read-resource-text.html">readResourceText</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-622291540%2FFunctions%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">internal fun <a href="read-resource-text.html">readResourceText</a>(resourcePath: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-622291540%2FFunctions%2F-879532132" anchor-label="readResourceText" id="-622291540%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a><div class="brief "><a data-name="-622291540%2FFunctions%2F-879532132" anchor-label="readResourceText" id="-622291540%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Read the contents of a file on the classpath as UTF-8 text.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-574075052%2FFunctions%2F788909594" anchor-label="seq" id="-574075052%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="seq.html">seq</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-574075052%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="seq.html">seq</a>(server: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, renderer: <a href="../io.klogging.rendering/index.html#-38488107%2FClasslikes%2F788909594">RenderString</a> = RENDER_CLEF): <a href="-sink-configuration/index.html">SinkConfiguration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-574075052%2FFunctions%2F788909594" anchor-label="seq" id="-574075052%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-574075052%2FFunctions%2F788909594" anchor-label="seq" id="-574075052%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Sink configuration for a <a href="https://datalust.co/seq">Seq</a> server.</div></div>
-</div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+<a data-name="402417255%2FClasslikes%2F-972240762" anchor-label="FileLoggingConfig" id="402417255%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-logging-config/index.html"><span>File</span><wbr></wbr><span>Logging</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="402417255%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-file-logging-config/index.html">FileLoggingConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fromLoggerBase<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stopOnMatch<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>exactLogger<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>matchLogger<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>levelRanges<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-file-level-range/index.html">FileLevelRange</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Data class for a file representation of a <a href="-logging-config/index.html">LoggingConfig</a>.</p></div></div></div>
                 </div>
               </div>
-              <h2 class="">Properties</h2>
-              <div class="table" data-togglable="Properties"><a data-name="167823739%2FProperties%2F788909594" anchor-label="BUILT_IN_CONFIGURATIONS" id="167823739%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-b-u-i-l-t_-i-n_-c-o-n-f-i-g-u-r-a-t-i-o-n-s.html">BUILT_IN_CONFIGURATIONS</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="167823739%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="167823739%2FProperties%2F788909594" anchor-label="BUILT_IN_CONFIGURATIONS" id="167823739%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal val <a href="-b-u-i-l-t_-i-n_-c-o-n-f-i-g-u-r-a-t-i-o-n-s.html">BUILT_IN_CONFIGURATIONS</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="-klogging-configuration/index.html">KloggingConfiguration</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="167823739%2FProperties%2F788909594" anchor-label="BUILT_IN_CONFIGURATIONS" id="167823739%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Map of built-in configurations by name.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+<a data-name="-422500475%2FClasslikes%2F-972240762" anchor-label="FileSinkConfiguration" id="-422500475%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-sink-configuration/index.html"><span>File</span><wbr></wbr><span>Sink</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-422500475%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-file-sink-configuration/index.html">FileSinkConfiguration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>renderWith<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>renderPattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sendTo<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>seqServer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>checkCertificate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>splunkServer<span class="token operator">: </span><a href="../io.klogging.sending/-splunk-endpoint/index.html">SplunkEndpoint</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>renderHec<span class="token operator">: </span><a href="-render-hec/index.html">RenderHec</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eventSender<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Data class for a file representation of a <a href="-sink-configuration/index.html">SinkConfiguration</a>.</p></div></div></div>
                 </div>
-<a data-name="-469583982%2FProperties%2F788909594" anchor-label="BUILT_IN_RENDERERS" id="-469583982%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-b-u-i-l-t_-i-n_-r-e-n-d-e-r-e-r-s.html">BUILT_IN_RENDERERS</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-469583982%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-469583982%2FProperties%2F788909594" anchor-label="BUILT_IN_RENDERERS" id="-469583982%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal val <a href="-b-u-i-l-t_-i-n_-r-e-n-d-e-r-e-r-s.html">BUILT_IN_RENDERERS</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="../io.klogging.rendering/index.html#-38488107%2FClasslikes%2F788909594">RenderString</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-469583982%2FProperties%2F788909594" anchor-label="BUILT_IN_RENDERERS" id="-469583982%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Map of built-in renderers by name.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2129601627%2FClasslikes%2F1536213936" anchor-label="HoconConfiguration" id="2129601627%2FClasslikes%2F1536213936" data-filterable-set=":klogging:dokkaHtml/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/jvmMain" data-filterable-set=":klogging:dokkaHtml/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hocon-configuration/index.html"><span>Hocon</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2129601627%2FClasslikes%2F1536213936"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/jvmMain" data-filterable-set=":klogging:dokkaHtml/jvmMain" data-active="" data-toggle=":klogging:dokkaHtml/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-hocon-configuration/index.html">HoconConfiguration</a></div></div>                  </div>
                 </div>
-<a data-name="537425860%2FProperties%2F788909594" anchor-label="BUILT_IN_SENDERS" id="537425860%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-b-u-i-l-t_-i-n_-s-e-n-d-e-r-s.html">BUILT_IN_SENDERS</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="537425860%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="537425860%2FProperties%2F788909594" anchor-label="BUILT_IN_SENDERS" id="537425860%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal val <a href="-b-u-i-l-t_-i-n_-s-e-n-d-e-r-s.html">BUILT_IN_SENDERS</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="../io.klogging.sending/index.html#-1312105551%2FClasslikes%2F788909594">SendString</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="537425860%2FProperties%2F788909594" anchor-label="BUILT_IN_SENDERS" id="537425860%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Map of built-in senders by name.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="593661182%2FClasslikes%2F-972240762" anchor-label="JsonConfiguration" id="593661182%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-json-configuration/index.html"><span>Json</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593661182%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-json-configuration/index.html">JsonConfiguration</a></div><div class="brief "><p class="paragraph">Object to manage Klogging configuration from JSON files.</p></div></div></div>
                 </div>
-<a data-name="1275253660%2FProperties%2F788909594" anchor-label="configLoadedFromFile" id="1275253660%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="config-loaded-from-file.html">configLoadedFromFile</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1275253660%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="1275253660%2FProperties%2F788909594" anchor-label="configLoadedFromFile" id="1275253660%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">val <a href="config-loaded-from-file.html">configLoadedFromFile</a>: <a href="-klogging-configuration/index.html">KloggingConfiguration</a>?<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1275253660%2FProperties%2F788909594" anchor-label="configLoadedFromFile" id="1275253660%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Attempt to load configuration from a file.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-650799574%2FClasslikes%2F-972240762" anchor-label="KloggingConfiguration" id="-650799574%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-klogging-configuration/index.html"><span>Klogging</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-650799574%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a></div><div class="brief "><p class="paragraph">Klogging configuration for a runtime.</p></div></div></div>
                 </div>
-<a data-name="601428664%2FProperties%2F788909594" anchor-label="DEFAULT_CONSOLE" id="601428664%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-d-e-f-a-u-l-t_-c-o-n-s-o-l-e.html">DEFAULT_CONSOLE</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="601428664%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="601428664%2FProperties%2F788909594" anchor-label="DEFAULT_CONSOLE" id="601428664%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">val <a href="-d-e-f-a-u-l-t_-c-o-n-s-o-l-e.html">DEFAULT_CONSOLE</a>: <a href="-klogging-configuration/index.html">KloggingConfiguration</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="601428664%2FProperties%2F788909594" anchor-label="DEFAULT_CONSOLE" id="601428664%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Simple default configuration for logging to the standard output stream.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-540702563%2FClasslikes%2F-972240762" anchor-label="LevelRange" id="-540702563%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-level-range/index.html"><span>Level</span><wbr></wbr><span><span>Range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-540702563%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-level-range/index.html">LevelRange</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.ranges/-closed-range/index.html">ClosedRange</a><span class="token operator">&lt;</span><a href="../io.klogging/-level/index.html">Level</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Inclusive range of logging levels with the names of sinks where events will be sent.</p></div></div></div>
                 </div>
-<a data-name="-253842932%2FProperties%2F788909594" anchor-label="defaultKloggingMinLogLevel" id="-253842932%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="default-klogging-min-log-level.html">defaultKloggingMinLogLevel</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-253842932%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-253842932%2FProperties%2F788909594" anchor-label="defaultKloggingMinLogLevel" id="-253842932%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal val <a href="default-klogging-min-log-level.html">defaultKloggingMinLogLevel</a>: <a href="../io.klogging/-level/index.html">Level</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-253842932%2FProperties%2F788909594" anchor-label="defaultKloggingMinLogLevel" id="-253842932%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Set the default Klogging log level from the environment using name <a href="-e-n-v_-k-l-o-g-g-i-n-g_-m-i-n_-l-o-g_-l-e-v-e-l.html">ENV_KLOGGING_MIN_LOG_LEVEL</a> if present, else default to <a href="../io.klogging/-level/-i-n-f-o/index.html">INFO</a>.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="857028427%2FClasslikes%2F-972240762" anchor-label="LoggingConfig" id="857028427%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-logging-config/index.html"><span>Logging</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="857028427%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-logging-config/index.html">LoggingConfig</a></div><div class="brief "><p class="paragraph">Logging configuration with a logger name match and a list of level ranges that maps to a list of sinks for each.</p></div></div></div>
                 </div>
-<a data-name="-489033852%2FProperties%2F788909594" anchor-label="ENV" id="-489033852%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v.html">ENV</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-489033852%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-489033852%2FProperties%2F788909594" anchor-label="ENV" id="-489033852%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal val <a href="-e-n-v.html">ENV</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-489033852%2FProperties%2F788909594" anchor-label="ENV" id="-489033852%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>A map of operating system environment variables and values for the current process.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1254742428%2FClasslikes%2F-972240762" anchor-label="RenderHec" id="1254742428%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-render-hec/index.html"><span>Render</span><wbr></wbr><span><span>Hec</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1254742428%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-render-hec/index.html">RenderHec</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sourceType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Data class for file representation of a <a href="-render-hec/index.html">RenderHec</a>.</p></div></div></div>
                 </div>
-<a data-name="-1021259337%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_BATCH_MAX_SIZE" id="-1021259337%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-b-a-t-c-h_-m-a-x_-s-i-z-e.html">ENV_KLOGGING_BATCH_MAX_SIZE</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1021259337%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-1021259337%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_BATCH_MAX_SIZE" id="-1021259337%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-b-a-t-c-h_-m-a-x_-s-i-z-e.html">ENV_KLOGGING_BATCH_MAX_SIZE</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1487551914%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_BATCH_MAX_TIME_MS" id="1487551914%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-b-a-t-c-h_-m-a-x_-t-i-m-e_-m-s.html">ENV_KLOGGING_BATCH_MAX_TIME_MS</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1487551914%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="1487551914%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_BATCH_MAX_TIME_MS" id="1487551914%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-b-a-t-c-h_-m-a-x_-t-i-m-e_-m-s.html">ENV_KLOGGING_BATCH_MAX_TIME_MS</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-2076276231%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_CONFIG_JSON_PATH" id="-2076276231%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-c-o-n-f-i-g_-j-s-o-n_-p-a-t-h.html">ENV_KLOGGING_CONFIG_JSON_PATH</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2076276231%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-2076276231%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_CONFIG_JSON_PATH" id="-2076276231%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-c-o-n-f-i-g_-j-s-o-n_-p-a-t-h.html">ENV_KLOGGING_CONFIG_JSON_PATH</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="2019871392%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_COROUTINE_THREADS" id="2019871392%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-c-o-r-o-u-t-i-n-e_-t-h-r-e-a-d-s.html">ENV_KLOGGING_COROUTINE_THREADS</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2019871392%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="2019871392%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_COROUTINE_THREADS" id="2019871392%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-c-o-r-o-u-t-i-n-e_-t-h-r-e-a-d-s.html">ENV_KLOGGING_COROUTINE_THREADS</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-896257571%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_EVENT_CHANNEL_CAPACITY" id="-896257571%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-e-v-e-n-t_-c-h-a-n-n-e-l_-c-a-p-a-c-i-t-y.html">ENV_KLOGGING_EVENT_CHANNEL_CAPACITY</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-896257571%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-896257571%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_EVENT_CHANNEL_CAPACITY" id="-896257571%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-e-v-e-n-t_-c-h-a-n-n-e-l_-c-a-p-a-c-i-t-y.html">ENV_KLOGGING_EVENT_CHANNEL_CAPACITY</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="151680062%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_FF_EXECUTOR_THREAD_POOL" id="151680062%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-f-f_-e-x-e-c-u-t-o-r_-t-h-r-e-a-d_-p-o-o-l.html">ENV_KLOGGING_FF_EXECUTOR_THREAD_POOL</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="151680062%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="151680062%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_FF_EXECUTOR_THREAD_POOL" id="151680062%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-f-f_-e-x-e-c-u-t-o-r_-t-h-r-e-a-d_-p-o-o-l.html">ENV_KLOGGING_FF_EXECUTOR_THREAD_POOL</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1800690342%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_MIN_LOG_LEVEL" id="1800690342%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-m-i-n_-l-o-g_-l-e-v-e-l.html">ENV_KLOGGING_MIN_LOG_LEVEL</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1800690342%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="1800690342%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_MIN_LOG_LEVEL" id="1800690342%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-m-i-n_-l-o-g_-l-e-v-e-l.html">ENV_KLOGGING_MIN_LOG_LEVEL</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="835946592%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_SINK_CHANNEL_CAPACITY" id="835946592%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-e-n-v_-k-l-o-g-g-i-n-g_-s-i-n-k_-c-h-a-n-n-e-l_-c-a-p-a-c-i-t-y.html">ENV_KLOGGING_SINK_CHANNEL_CAPACITY</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="835946592%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="835946592%2FProperties%2F788909594" anchor-label="ENV_KLOGGING_SINK_CHANNEL_CAPACITY" id="835946592%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-e-n-v_-k-l-o-g-g-i-n-g_-s-i-n-k_-c-h-a-n-n-e-l_-c-a-p-a-c-i-t-y.html">ENV_KLOGGING_SINK_CHANNEL_CAPACITY</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="741163617%2FProperties%2F788909594" anchor-label="json" id="741163617%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="json.html">json</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="741163617%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="741163617%2FProperties%2F788909594" anchor-label="json" id="741163617%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">private val <a href="json.html">json</a>: <span data-unresolved-link="kotlinx.serialization.json/Json///PointingToDeclaration/">Json</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="741163617%2FProperties%2F788909594" anchor-label="json" id="741163617%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Set up the JSON deserialiser to be accepting of unknown and malformed values.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1612797476%2FProperties%2F788909594" anchor-label="JSON_CONFIG_FILENAME" id="-1612797476%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-j-s-o-n_-c-o-n-f-i-g_-f-i-l-e-n-a-m-e.html">JSON_CONFIG_FILENAME</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1612797476%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-1612797476%2FProperties%2F788909594" anchor-label="JSON_CONFIG_FILENAME" id="-1612797476%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">internal const val <a href="-j-s-o-n_-c-o-n-f-i-g_-f-i-l-e-n-a-m-e.html">JSON_CONFIG_FILENAME</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1612797476%2FProperties%2F788909594" anchor-label="JSON_CONFIG_FILENAME" id="-1612797476%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Name of the JSON configuration file on the classpath.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1783998283%2FProperties%2F788909594" anchor-label="STDOUT_SIMPLE" id="1783998283%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-s-t-d-o-u-t_-s-i-m-p-l-e.html">STDOUT_SIMPLE</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1783998283%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="1783998283%2FProperties%2F788909594" anchor-label="STDOUT_SIMPLE" id="1783998283%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">val <a href="-s-t-d-o-u-t_-s-i-m-p-l-e.html">STDOUT_SIMPLE</a>: <a href="-sink-configuration/index.html">SinkConfiguration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1783998283%2FProperties%2F788909594" anchor-label="STDOUT_SIMPLE" id="1783998283%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Simple sink configuration for rendering simple strings to the standard output stream.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="898557545%2FClasslikes%2F-972240762" anchor-label="SinkConfiguration" id="898557545%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sink-configuration/index.html"><span>Sink</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="898557545%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sink-configuration/index.html">SinkConfiguration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">renderer<span class="token operator">: </span><a href="../io.klogging.rendering/-render-string/index.html">RenderString</a><span class="token operator"> = </span>RENDER_SIMPLE<span class="token punctuation">, </span></span><span class="parameter ">stringSender<span class="token operator">: </span><a href="../io.klogging.sending/-send-string/index.html">SendString</a><span class="token operator"> = </span>STDOUT<span class="token punctuation">, </span></span><span class="parameter ">eventSender<span class="token operator">: </span><a href="../io.klogging.sending/-event-sender/index.html">EventSender</a><span class="token operator"> = </span>senderFrom(renderer, stringSender)</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configuration of a logging sink, comprising a sender and a renderer.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1885623918%2FProperties%2F-972240762" anchor-label="ANSI_CONSOLE" id="1885623918%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-n-s-i_-c-o-n-s-o-l-e.html"><span>ANSI_</span><wbr></wbr><span>CONSOLE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1885623918%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-a-n-s-i_-c-o-n-s-o-l-e.html">ANSI_CONSOLE</a><span class="token operator">: </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Simple default configuration for logging ANSI-coloured strings to the standard output stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-941210477%2FProperties%2F-972240762" anchor-label="ANSI_STDERR" id="-941210477%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-n-s-i_-s-t-d-e-r-r.html"><span>ANSI_</span><wbr></wbr><span>STDERR</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-941210477%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-a-n-s-i_-s-t-d-e-r-r.html">ANSI_STDERR</a><span class="token operator">: </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Simple default configuration for logging ANSI-coloured strings to the standard error stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1275253660%2FProperties%2F-972240762" anchor-label="configLoadedFromFile" id="1275253660%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="config-loaded-from-file.html"><span>config</span><wbr></wbr><span>Loaded</span><wbr></wbr><span>From</span><wbr></wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1275253660%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="config-loaded-from-file.html">configLoadedFromFile</a><span class="token operator">: </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Lazily load configuration from a file.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="601428664%2FProperties%2F-972240762" anchor-label="DEFAULT_CONSOLE" id="601428664%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-f-a-u-l-t_-c-o-n-s-o-l-e.html"><span>DEFAULT_</span><wbr></wbr><span>CONSOLE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="601428664%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-c-o-n-s-o-l-e.html">DEFAULT_CONSOLE</a><span class="token operator">: </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Simple default configuration for logging to the standard output stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1675372791%2FProperties%2F-972240762" anchor-label="DEFAULT_STDERR" id="-1675372791%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-e-f-a-u-l-t_-s-t-d-e-r-r.html"><span>DEFAULT_</span><wbr></wbr><span>STDERR</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1675372791%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-d-e-f-a-u-l-t_-s-t-d-e-r-r.html">DEFAULT_STDERR</a><span class="token operator">: </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Simple default configuration for logging to the standard error stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-44605775%2FProperties%2F-972240762" anchor-label="STDERR_ANSI" id="-44605775%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-d-e-r-r_-a-n-s-i.html"><span>STDERR_</span><wbr></wbr><span>ANSI</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-44605775%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-t-d-e-r-r_-a-n-s-i.html">STDERR_ANSI</a><span class="token operator">: </span><a href="-sink-configuration/index.html">SinkConfiguration</a></div><div class="brief "><p class="paragraph">Simple sink configuration for rendering ANSI-coloured strings to the standard error stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1295030942%2FProperties%2F-972240762" anchor-label="STDERR_SIMPLE" id="-1295030942%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-d-e-r-r_-s-i-m-p-l-e.html"><span>STDERR_</span><wbr></wbr><span>SIMPLE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1295030942%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-t-d-e-r-r_-s-i-m-p-l-e.html">STDERR_SIMPLE</a><span class="token operator">: </span><a href="-sink-configuration/index.html">SinkConfiguration</a></div><div class="brief "><p class="paragraph">Simple sink configuration for rendering simple strings to the standard error stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1440282918%2FProperties%2F-972240762" anchor-label="STDOUT_ANSI" id="-1440282918%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-d-o-u-t_-a-n-s-i.html"><span>STDOUT_</span><wbr></wbr><span>ANSI</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1440282918%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-t-d-o-u-t_-a-n-s-i.html">STDOUT_ANSI</a><span class="token operator">: </span><a href="-sink-configuration/index.html">SinkConfiguration</a></div><div class="brief "><p class="paragraph">Simple sink configuration for rendering ANSI-coloured strings to the standard output stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1783998283%2FProperties%2F-972240762" anchor-label="STDOUT_SIMPLE" id="1783998283%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-d-o-u-t_-s-i-m-p-l-e.html"><span>STDOUT_</span><wbr></wbr><span>SIMPLE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1783998283%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-t-d-o-u-t_-s-i-m-p-l-e.html">STDOUT_SIMPLE</a><span class="token operator">: </span><a href="-sink-configuration/index.html">SinkConfiguration</a></div><div class="brief "><p class="paragraph">Simple sink configuration for rendering simple strings to the standard output stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="23502421%2FFunctions%2F-972240762" anchor-label="evalEnv" id="23502421%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="eval-env.html"><span>eval</span><wbr></wbr><span><span>Env</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="23502421%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="eval-env.html"><span class="token function">evalEnv</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">env<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>ENV</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Evaluate env vars in a string. Env vars must be surrounded by braces and preceded with ‘$’, e.g. <code class="lang-kotlin">${KLOGGING_BLAH}</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2086926595%2FFunctions%2F-972240762" anchor-label="getenv" id="-2086926595%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="getenv.html"><span><span>getenv</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2086926595%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="getenv.html"><span class="token function">getenv</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Return the value of an item in the running environment, or <code class="lang-kotlin">null</code> if the name is not found.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="getenv.html"><span class="token function">getenv</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Return the value of an item in the running environment, or a default value if not found.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="51826560%2FFunctions%2F-972240762" anchor-label="getenvBoolean" id="51826560%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="getenv-boolean.html"><span>getenv</span><wbr></wbr><span><span>Boolean</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="51826560%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="getenv-boolean.html"><span class="token function">getenvBoolean</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Return the value of an item in the running environment as a <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a>, or a default value if not found.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-913844693%2FFunctions%2F-972240762" anchor-label="getenvInt" id="-913844693%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="getenv-int.html"><span>getenv</span><wbr></wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-913844693%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="getenv-int.html"><span class="token function">getenvInt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">minValue<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Return the value of an item in the running environment as an <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a>, or a default value if not found or if the value cannot be parsed as an <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-283760958%2FFunctions%2F-972240762" anchor-label="getenvLong" id="-283760958%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="getenv-long.html"><span>getenv</span><wbr></wbr><span><span>Long</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-283760958%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="getenv-long.html"><span class="token function">getenvLong</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">minValue<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Return the value of an item in the running environment as a <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a>, or a default value if not found or if the value cannot be parsed as a <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1670793221%2FFunctions%2F-972240762" anchor-label="graylog" id="-1670793221%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="graylog.html"><span><span>graylog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1670793221%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="graylog.html"><span class="token function">graylog</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">renderer<span class="token operator">: </span><a href="../io.klogging.rendering/-render-string/index.html">RenderString</a><span class="token operator"> = </span>RENDER_GELF</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-sink-configuration/index.html">SinkConfiguration</a></div><div class="brief "><p class="paragraph">Sink configuration for a <a href="https://www.graylog.org/">Graylog</a> server.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="545822951%2FFunctions%2F-972240762" anchor-label="loggingConfiguration" id="545822951%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="logging-configuration.html"><span>logging</span><wbr></wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545822951%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="logging-configuration.html"><span class="token function">loggingConfiguration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">append<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><a href="-klogging-configuration/index.html">KloggingConfiguration</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Root DSL function for creating a <a href="-klogging-configuration/index.html">KloggingConfiguration</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-539569524%2FFunctions%2F-972240762" anchor-label="seq" id="-539569524%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="seq.html"><span><span>seq</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-539569524%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="seq.html"><span class="token function">seq</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">checkCertificate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">renderer<span class="token operator">: </span><a href="../io.klogging.rendering/-render-string/index.html">RenderString</a><span class="token operator"> = </span>RENDER_CLEF</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-sink-configuration/index.html">SinkConfiguration</a></div><div class="brief "><p class="paragraph">Sink configuration for a <a href="https://datalust.co/seq">Seq</a> server.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
-

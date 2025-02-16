@@ -1,489 +1,411 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>io.klogging.sending</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script><script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../scripts/main.js" async="async"></script>  </head>
-  <body>
-    <div id="container">
-      <div id="leftColumn"><a href="../../index.html">
-          <div id="logo"></div>
-        </a>
-        <div id="paneSearch"></div>
-        <div id="sideMenu"></div>
-      </div>
-      <div id="main">
-        <div id="leftToggler"><span class="icon-toggler"></span></div>
-<script type="text/javascript" src="../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="Klogging::io.klogging.sending////PointingToDeclaration//1481200572">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../index.html">Klogging</a>/<a href="index.html">io.klogging.sending</a></div>
-            <div class="pull-right d-flex">
-              <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":dokkaHtml/commonMain">common</button><button class="platform-tag platform-selector js-like" data-active="" data-filter=":dokkaHtml/jsMain">js</button><button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/jvmMain">jvm</button><button class="platform-tag platform-selector native-like" data-active="" data-filter=":dokkaHtml/nativeMain">native</button></div>
-              <div id="searchBar"></div>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    Klogging
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.9.0-SNAPSHOT        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/iosMain">ios</button>
+                <button class="platform-tag platform-selector js-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector wasm-like" data-active=""
+                        data-filter=":klogging:dokkaHtml/wasmJsMain">wasmJs</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/androidMain"
+                                       data-filter=":klogging:dokkaHtml/androidMain"/>
+                                <span class="checkbox--icon"></span>
+                                android
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/commonMain"
+                                       data-filter=":klogging:dokkaHtml/commonMain"/>
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/iosMain"
+                                       data-filter=":klogging:dokkaHtml/iosMain"/>
+                                <span class="checkbox--icon"></span>
+                                ios
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/jsMain"
+                                       data-filter=":klogging:dokkaHtml/jsMain"/>
+                                <span class="checkbox--icon"></span>
+                                js
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/jvmMain"
+                                       data-filter=":klogging:dokkaHtml/jvmMain"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option wasm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":klogging:dokkaHtml/wasmJsMain"
+                                       data-filter=":klogging:dokkaHtml/wasmJsMain"/>
+                                <span class="checkbox--icon"></span>
+                                wasmJs
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Klogging
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="Klogging::io.klogging.sending////PointingToDeclaration//-1582117039">
+  <div class="breadcrumbs"><a href="../../index.html">Klogging</a><span class="delimiter">/</span><span class="current">io.klogging.sending</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/androidMain" data-filterable-set=":klogging:dokkaHtml/androidMain" data-active="" data-toggle=":klogging:dokkaHtml/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain" data-toggle=":klogging:dokkaHtml/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/iosMain" data-filterable-set=":klogging:dokkaHtml/iosMain" data-toggle=":klogging:dokkaHtml/iosMain">ios</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/jsMain" data-filterable-set=":klogging:dokkaHtml/jsMain" data-toggle=":klogging:dokkaHtml/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/jvmMain" data-filterable-set=":klogging:dokkaHtml/jvmMain" data-toggle=":klogging:dokkaHtml/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/wasmJsMain" data-filterable-set=":klogging:dokkaHtml/wasmJsMain" data-toggle=":klogging:dokkaHtml/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/androidMain"><p class="paragraph">Sending rendered log events to sinks.</p></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/commonMain"><p class="paragraph">Sending rendered log events to sinks.</p></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/iosMain"><p class="paragraph">Sending rendered log events to sinks.</p></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/jsMain"><p class="paragraph">Sending rendered log events to sinks.</p></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/jvmMain"><p class="paragraph">Sending rendered log events to sinks.</p></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/wasmJsMain"><p class="paragraph">Sending rendered log events to sinks.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-423636993%2FClasslikes%2F-972240762" anchor-label="ElkEndpoint" id="-423636993%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-elk-endpoint/index.html"><span>Elk</span><wbr></wbr><span><span>Endpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-423636993%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-elk-endpoint/index.html">ElkEndpoint</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>checkCertificate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Model of an ELK server endpoint</p></div></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="cover ">
-            <h1 class="cover"><span>Package io.</span><wbr></wbr><span>klogging.</span><wbr></wbr><span>sending</span></h1>
-            <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><p class="paragraph">Sending rendered log events to sinks.</p></div></div>
+<a data-name="998692245%2FClasslikes%2F-972240762" anchor-label="Endpoint" id="998692245%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-endpoint/index.html"><span><span>Endpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="998692245%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-endpoint/index.html">Endpoint</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>host<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;localhost&quot;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>port<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">12201</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Model of a Graylog server endpoint.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tabbedcontent">
-            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
-            <div class="tabs-section-body">
-              <h2 class="">Types</h2>
-              <div class="table" data-togglable="Types"><a data-name="998692245%2FClasslikes%2F788909594" anchor-label="Endpoint" id="998692245%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-endpoint/index.html">Endpoint</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="998692245%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-endpoint/index.html">Endpoint</a>(host: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, port: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="998692245%2FClasslikes%2F788909594" anchor-label="Endpoint" id="998692245%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="998692245%2FClasslikes%2F788909594" anchor-label="Endpoint" id="998692245%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Model of a Graylog server endpoint.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-2058003031%2FClasslikes%2F788909594" anchor-label="EventSender" id="-2058003031%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="index.html#-2058003031%2FClasslikes%2F788909594">EventSender</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058003031%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">typealias <a href="index.html#-2058003031%2FClasslikes%2F788909594">EventSender</a> = suspend (<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../io.klogging.events/-log-event/index.html">LogEvent</a>&gt;) -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-2058003031%2FClasslikes%2F788909594" anchor-label="EventSender" id="-2058003031%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-2058003031%2FClasslikes%2F788909594" anchor-label="EventSender" id="-2058003031%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><p class="paragraph">Function type for sending a log event somewhere.</p></div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1312105551%2FClasslikes%2F788909594" anchor-label="SendString" id="-1312105551%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1312105551%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">typealias <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a> = suspend (<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>) -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1312105551%2FClasslikes%2F788909594" anchor-label="SendString" id="-1312105551%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-1312105551%2FClasslikes%2F788909594" anchor-label="SendString" id="-1312105551%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><p class="paragraph">Functional type used for sending a string to a target somewhere.</p></div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1927848498%2FClasslikes%2F788909594" anchor-label="SplunkEndpoint" id="1927848498%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-splunk-endpoint/index.html">SplunkEndpoint</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1927848498%2FClasslikes%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">data class <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>(hecUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, hecToken: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, index: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, sourceType: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, checkCertificate: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1927848498%2FClasslikes%2F788909594" anchor-label="SplunkEndpoint" id="1927848498%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="1927848498%2FClasslikes%2F788909594" anchor-label="SplunkEndpoint" id="1927848498%2FClasslikes%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Model of a Splunk server HEC endpoint.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1259510775%2FClasslikes%2F-879532132" anchor-label="TrustModifier" id="-1259510775%2FClasslikes%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-trust-modifier/index.html">TrustModifier</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1259510775%2FClasslikes%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">internal object <a href="-trust-modifier/index.html">TrustModifier</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
+<a data-name="-2058003031%2FClasslikes%2F-972240762" anchor-label="EventSender" id="-2058003031%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-sender/index.html"><span>Event</span><wbr></wbr><span><span>Sender</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058003031%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-event-sender/index.html">EventSender</a></div><div class="brief "><p class="paragraph">Interface for sending log events somewhere.</p></div></div></div>
                 </div>
               </div>
-              <h2 class="">Functions</h2>
-              <div class="table" data-togglable="Functions"><a data-name="-410544698%2FFunctions%2F1481200572" anchor-label="graylogServer" id="-410544698%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="graylog-server.html">graylogServer</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-410544698%2FFunctions%2F1481200572"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="graylog-server.html">graylogServer</a>(endpoint: <a href="-endpoint/index.html">Endpoint</a>): <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-410544698%2FFunctions%2F1481200572" anchor-label="graylogServer" id="-410544698%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="-410544698%2FFunctions%2F788909594" anchor-label="graylogServer" id="-410544698%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Send a rendered string to a Graylog server.</div></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jsMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/jsMain :dokkaHtml/nativeMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":dokkaHtml/jsMain" data-filterable-set=":dokkaHtml/jsMain" data-active="" data-toggle=":dokkaHtml/jsMain">js</button><button class="platform-bookmark native-like" data-filterable-current=":dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/nativeMain" data-toggle=":dokkaHtml/nativeMain">native</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="graylog-server.html">graylogServer</a>(endpoint: <a href="-endpoint/index.html">Endpoint</a>): <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/nativeMain"><div class="symbol monospace">fun <a href="graylog-server.html">graylogServer</a>(endpoint: <a href="-endpoint/index.html">Endpoint</a>): <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
-  </div>
-<a data-name="-410544698%2FFunctions%2F1481200572" anchor-label="graylogServer" id="-410544698%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag jvm-like">jvm</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">fun <a href="graylog-server.html">graylogServer</a>(endpoint: <a href="-endpoint/index.html">Endpoint</a>): <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-410544698%2FFunctions%2F1481200572" anchor-label="graylogServer" id="-410544698%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="-410544698%2FFunctions%2F-879532132" anchor-label="graylogServer" id="-410544698%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Send GELF event strings to a Graylog server on the JVM using UDP.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="2130184963%2FFunctions%2F-879532132" anchor-label="hecConnection" id="2130184963%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="hec-connection.html">hecConnection</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2130184963%2FFunctions%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">private fun <a href="hec-connection.html">hecConnection</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>): <a href="https://docs.oracle.com/javase/8/docs/api/javax/net/ssl/HttpsURLConnection.html">HttpsURLConnection</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="7925841%2FFunctions%2F788909594" anchor-label="receiveBatch" id="7925841%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="receive-batch.html">receiveBatch</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="7925841%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">suspend fun &lt;<a href="receive-batch.html">E</a>&gt; <a href="receive-batch.html">receiveBatch</a>(channel: <span data-unresolved-link="kotlinx.coroutines.channels/ReceiveChannel///PointingToDeclaration/">ReceiveChannel</span>&lt;<a href="receive-batch.html">E</a>&gt;, maxTimeMillis: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>, maxSize: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="receive-batch.html">E</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="7925841%2FFunctions%2F788909594" anchor-label="receiveBatch" id="7925841%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="7925841%2FFunctions%2F788909594" anchor-label="receiveBatch" id="7925841%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Receive a batch of items from a channel, up to time and batch size limits.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1066519812%2FFunctions%2F788909594" anchor-label="senderFrom" id="-1066519812%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="sender-from.html">senderFrom</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1066519812%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="sender-from.html">senderFrom</a>(renderer: <a href="../io.klogging.rendering/index.html#-38488107%2FClasslikes%2F788909594">RenderString</a>, sender: <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a>): <a href="index.html#-2058003031%2FClasslikes%2F788909594">EventSender</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1066519812%2FFunctions%2F788909594" anchor-label="senderFrom" id="-1066519812%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="-1066519812%2FFunctions%2F788909594" anchor-label="senderFrom" id="-1066519812%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Convert a <a href="../io.klogging.rendering/index.html#-38488107%2FClasslikes%2F788909594">RenderString</a> and <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a> into an <a href="index.html#-2058003031%2FClasslikes%2F788909594">EventSender</a>.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-167963087%2FFunctions%2F-879532132" anchor-label="sendToGraylog" id="-167963087%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="send-to-graylog.html">sendToGraylog</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-167963087%2FFunctions%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">private fun <a href="send-to-graylog.html">sendToGraylog</a>(endpoint: <a href="-endpoint/index.html">Endpoint</a>, eventString: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-167963087%2FFunctions%2F-879532132" anchor-label="sendToGraylog" id="-167963087%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a><div class="brief "><a data-name="-167963087%2FFunctions%2F-879532132" anchor-label="sendToGraylog" id="-167963087%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Send a GELF event string to a Graylog server using UDP.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-1543513696%2FFunctions%2F-879532132" anchor-label="sendToSeq" id="-1543513696%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="send-to-seq.html">sendToSeq</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1543513696%2FFunctions%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">private fun <a href="send-to-seq.html">sendToSeq</a>(serverUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>, eventString: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1543513696%2FFunctions%2F-879532132" anchor-label="sendToSeq" id="-1543513696%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a><div class="brief "><a data-name="-1543513696%2FFunctions%2F-879532132" anchor-label="sendToSeq" id="-1543513696%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Send a CLEF event string to a Seq server.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1684476179%2FFunctions%2F-879532132" anchor-label="sendToSplunk" id="1684476179%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="send-to-splunk.html">sendToSplunk</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1684476179%2FFunctions%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">private fun <a href="send-to-splunk.html">sendToSplunk</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>, batch: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../io.klogging.events/-log-event/index.html">LogEvent</a>&gt;)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="542172828%2FFunctions%2F-879532132" anchor-label="seqConnection" id="542172828%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="seq-connection.html">seqConnection</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="542172828%2FFunctions%2F-879532132"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag jvm-like">jvm</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">private fun <a href="seq-connection.html">seqConnection</a>(serverUrl: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="https://docs.oracle.com/javase/8/docs/api/java/net/HttpURLConnection.html">HttpURLConnection</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="542172828%2FFunctions%2F-879532132" anchor-label="seqConnection" id="542172828%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a><div class="brief "><a data-name="542172828%2FFunctions%2F-879532132" anchor-label="seqConnection" id="542172828%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Construct an HTTP connection to the Seq server.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-2131319103%2FFunctions%2F1481200572" anchor-label="seqServer" id="-2131319103%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="seq-server.html">seqServer</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2131319103%2FFunctions%2F1481200572"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="seq-server.html">seqServer</a>(server: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-2131319103%2FFunctions%2F1481200572" anchor-label="seqServer" id="-2131319103%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="-2131319103%2FFunctions%2F788909594" anchor-label="seqServer" id="-2131319103%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Send a rendered string to a Seq server.</div></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jsMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/jsMain :dokkaHtml/nativeMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":dokkaHtml/jsMain" data-filterable-set=":dokkaHtml/jsMain" data-active="" data-toggle=":dokkaHtml/jsMain">js</button><button class="platform-bookmark native-like" data-filterable-current=":dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/nativeMain" data-toggle=":dokkaHtml/nativeMain">native</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="seq-server.html">seqServer</a>(server: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/nativeMain"><div class="symbol monospace">fun <a href="seq-server.html">seqServer</a>(server: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
-  </div>
-<a data-name="-2131319103%2FFunctions%2F1481200572" anchor-label="seqServer" id="-2131319103%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag jvm-like">jvm</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">fun <a href="seq-server.html">seqServer</a>(server: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>): <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-2131319103%2FFunctions%2F1481200572" anchor-label="seqServer" id="-2131319103%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="-2131319103%2FFunctions%2F-879532132" anchor-label="seqServer" id="-2131319103%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Send CLEF event strings to a Seq server on the JVM.</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="-82494476%2FFunctions%2F788909594" anchor-label="splunkBatch" id="-82494476%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="splunk-batch.html">splunkBatch</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-82494476%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">internal fun <a href="splunk-batch.html">splunkBatch</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>, batch: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../io.klogging.events/-log-event/index.html">LogEvent</a>&gt;): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-</div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1723421562%2FFunctions%2F788909594" anchor-label="splunkEvent" id="1723421562%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="splunk-event.html">splunkEvent</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1723421562%2FFunctions%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">internal fun <a href="splunk-event.html">splunkEvent</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>, event: <a href="../io.klogging.events/-log-event/index.html">LogEvent</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1723421562%2FFunctions%2F788909594" anchor-label="splunkEvent" id="1723421562%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="brief "><a data-name="1723421562%2FFunctions%2F788909594" anchor-label="splunkEvent" id="1723421562%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Convert a <a href="../io.klogging.events/-log-event/index.html">LogEvent</a> to a JSON-formatted string for Splunk</div></div>
-</div>
-                    </div>
-                  </div>
-                </div>
-<a data-name="1461024516%2FFunctions%2F1481200572" anchor-label="splunkHec" id="1461024516%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="splunk-hec.html">splunkHec</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1461024516%2FFunctions%2F1481200572"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag common-like">common</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="splunk-hec.html">splunkHec</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>): <a href="index.html#-2058003031%2FClasslikes%2F788909594">EventSender</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1461024516%2FFunctions%2F1481200572" anchor-label="splunkHec" id="1461024516%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="1461024516%2FFunctions%2F788909594" anchor-label="splunkHec" id="1461024516%2FFunctions%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Send an event to a Splunk server using [HTTP event collector<ul><li><p class="paragraph">(HEC)](https://docs.splunk.com/Documentation/Splunk/8.2.2/Data/HECExamples).</p></li></ul></div></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jsMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/jsMain :dokkaHtml/nativeMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
-      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":dokkaHtml/jsMain" data-filterable-set=":dokkaHtml/jsMain" data-active="" data-toggle=":dokkaHtml/jsMain">js</button><button class="platform-bookmark native-like" data-filterable-current=":dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/nativeMain" data-toggle=":dokkaHtml/nativeMain">native</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="splunk-hec.html">splunkHec</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>): <span data-unresolved-link="io.klogging.sending/EventSender///PointingToDeclaration/">EventSender</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/nativeMain"><div class="symbol monospace">fun <a href="splunk-hec.html">splunkHec</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>): <span data-unresolved-link="io.klogging.sending/EventSender///PointingToDeclaration/">EventSender</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
-  </div>
-<a data-name="1461024516%2FFunctions%2F1481200572" anchor-label="splunkHec" id="1461024516%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a></div>
-<div class="divergent-group" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain"><div class="with-platform-tags"><span class="pull-right">
-  <div class="platform-tags ">
-    <div class="platform-tag jvm-like">jvm</div>
-  </div>
-</span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/jvmMain"><div class="symbol monospace">fun <a href="splunk-hec.html">splunkHec</a>(endpoint: <a href="-splunk-endpoint/index.html">SplunkEndpoint</a>): <span data-unresolved-link="io.klogging.sending/EventSender///PointingToDeclaration/">EventSender</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="1461024516%2FFunctions%2F1481200572" anchor-label="splunkHec" id="1461024516%2FFunctions%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="brief "><a data-name="1461024516%2FFunctions%2F-879532132" anchor-label="splunkHec" id="1461024516%2FFunctions%2F-879532132" data-filterable-set=":dokkaHtml/jvmMain"></a>Send events to a Splunk HEC endpoint.</div></div>
-</div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+<a data-name="-1870927044%2FClasslikes%2F-972240762" anchor-label="SendElk" id="-1870927044%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-send-elk/index.html"><span>Send</span><wbr></wbr><span><span>Elk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1870927044%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-send-elk/index.html">SendElk</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endpoint<span class="token operator">: </span><a href="-elk-endpoint/index.html">ElkEndpoint</a></span></span><span class="token punctuation">)</span> : <a href="-event-sender/index.html">EventSender</a></div><div class="brief "><p class="paragraph">Send a batch of events to an ELK server in ECS format.</p></div></div></div>
                 </div>
               </div>
-              <h2 class="">Properties</h2>
-              <div class="table" data-togglable="Properties"><a data-name="-448309005%2FProperties%2F1481200572" anchor-label="STDERR" id="-448309005%2FProperties%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-s-t-d-e-r-r.html">STDERR</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-448309005%2FProperties%2F1481200572"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="title">
-                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
-                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain" data-active="" data-toggle=":dokkaHtml/commonMain">common</button><button class="platform-bookmark js-like" data-filterable-current=":dokkaHtml/jsMain" data-filterable-set=":dokkaHtml/jsMain" data-toggle=":dokkaHtml/jsMain">js</button><button class="platform-bookmark jvm-like" data-filterable-current=":dokkaHtml/jvmMain" data-filterable-set=":dokkaHtml/jvmMain" data-toggle=":dokkaHtml/jvmMain">jvm</button><button class="platform-bookmark native-like" data-filterable-current=":dokkaHtml/nativeMain" data-filterable-set=":dokkaHtml/nativeMain" data-toggle=":dokkaHtml/nativeMain">native</button></div>
-<div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-448309005%2FProperties%2F1481200572" anchor-label="STDERR" id="-448309005%2FProperties%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="symbol monospace">val <a href="-s-t-d-e-r-r.html">STDERR</a>: <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-448309005%2FProperties%2F788909594" anchor-label="STDERR" id="-448309005%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Send an event rendered as a string to the standard error stream.</div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/jsMain"><a data-name="-448309005%2FProperties%2F1481200572" anchor-label="STDERR" id="-448309005%2FProperties%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="symbol monospace">val <a href="-s-t-d-e-r-r.html">STDERR</a>: <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/jvmMain"><a data-name="-448309005%2FProperties%2F1481200572" anchor-label="STDERR" id="-448309005%2FProperties%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="symbol monospace">val <a href="-s-t-d-e-r-r.html">STDERR</a>: <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-depenent-content" data-togglable=":dokkaHtml/nativeMain"><a data-name="-448309005%2FProperties%2F1481200572" anchor-label="STDERR" id="-448309005%2FProperties%2F1481200572" data-filterable-set=":dokkaHtml/commonMain :dokkaHtml/jsMain :dokkaHtml/jvmMain :dokkaHtml/nativeMain"></a><div class="symbol monospace">val <a href="-s-t-d-e-r-r.html">STDERR</a>: <span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+<a data-name="-1312105551%2FClasslikes%2F-972240762" anchor-label="SendString" id="-1312105551%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-send-string/index.html"><span>Send</span><wbr></wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1312105551%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-send-string/index.html">SendString</a></div><div class="brief "><p class="paragraph">Interface used for sending a string to a target somewhere.</p></div></div></div>
                 </div>
-<a data-name="-48792790%2FProperties%2F788909594" anchor-label="STDOUT" id="-48792790%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-s-t-d-o-u-t.html">STDOUT</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-48792790%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-48792790%2FProperties%2F788909594" anchor-label="STDOUT" id="-48792790%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">val <a href="-s-t-d-o-u-t.html">STDOUT</a>: <a href="index.html#-1312105551%2FClasslikes%2F788909594">SendString</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-48792790%2FProperties%2F788909594" anchor-label="STDOUT" id="-48792790%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>Send an event rendered as a string to the standard output stream.</div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1927848498%2FClasslikes%2F-972240762" anchor-label="SplunkEndpoint" id="1927848498%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-splunk-endpoint/index.html"><span>Splunk</span><wbr></wbr><span><span>Endpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1927848498%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-splunk-endpoint/index.html">SplunkEndpoint</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>hecUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hecToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sourceType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>source<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>checkCertificate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;true&quot;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Model of a Splunk server HEC endpoint.</p></div></div></div>
                 </div>
-<a data-name="-1792211207%2FProperties%2F788909594" anchor-label="TIME_MARKER" id="-1792211207%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a>
-                <div class="table-row" data-filterable-current=":dokkaHtml/commonMain" data-filterable-set=":dokkaHtml/commonMain">
-                  <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-t-i-m-e_-m-a-r-k-e-r.html">TIME_MARKER</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1792211207%2FProperties%2F788909594"></span>
-                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                        </span></span></div>
-                    <div>
-                      <div class="platform-tags ">
-                        <div class="platform-tag common-like">common</div>
-                      </div>
-                      <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/commonMain"><a data-name="-1792211207%2FProperties%2F788909594" anchor-label="TIME_MARKER" id="-1792211207%2FProperties%2F788909594" data-filterable-set=":dokkaHtml/commonMain"></a><div class="symbol monospace">private const val <a href="-t-i-m-e_-m-a-r-k-e-r.html">TIME_MARKER</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1200557109%2FClasslikes%2F-972240762" anchor-label="SplunkHec" id="1200557109%2FClasslikes%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-splunk-hec/index.html"><span>Splunk</span><wbr></wbr><span><span>Hec</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1200557109%2FClasslikes%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-splunk-hec/index.html">SplunkHec</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">endpoint<span class="token operator">: </span><a href="-splunk-endpoint/index.html">SplunkEndpoint</a><span class="token punctuation">, </span></span><span class="parameter ">renderer<span class="token operator">: </span><a href="../io.klogging.rendering/-render-string/index.html">RenderString</a></span></span><span class="token punctuation">)</span> : <a href="-event-sender/index.html">EventSender</a></div><div class="brief "><p class="paragraph">Send a batch of events to a Splunk server using <a href="https://docs.splunk.com/Documentation/Splunk/8.2.2/Data/HECExamples">HTTP event collector (HEC)</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2021 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-67016714%2FProperties%2F-574525292" anchor-label="ANDROID" id="-67016714%2FProperties%2F-574525292" data-filterable-set=":klogging:dokkaHtml/androidMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/androidMain" data-filterable-set=":klogging:dokkaHtml/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-n-d-r-o-i-d.html"><span><span>ANDROID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-67016714%2FProperties%2F-574525292"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/androidMain" data-filterable-set=":klogging:dokkaHtml/androidMain" data-active="" data-toggle=":klogging:dokkaHtml/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/androidMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-a-n-d-r-o-i-d.html">ANDROID</a><span class="token operator">: </span><a href="-event-sender/index.html">EventSender</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-448309005%2FProperties%2F-1582117039" anchor-label="STDERR" id="-448309005%2FProperties%2F-1582117039" data-filterable-set=":klogging:dokkaHtml/commonMain,:klogging:dokkaHtml/androidMain,:klogging:dokkaHtml/iosMain,:klogging:dokkaHtml/jsMain,:klogging:dokkaHtml/jvmMain,:klogging:dokkaHtml/wasmJsMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain,:klogging:dokkaHtml/androidMain,:klogging:dokkaHtml/iosMain,:klogging:dokkaHtml/jsMain,:klogging:dokkaHtml/jvmMain,:klogging:dokkaHtml/wasmJsMain" data-filterable-set=":klogging:dokkaHtml/commonMain,:klogging:dokkaHtml/androidMain,:klogging:dokkaHtml/iosMain,:klogging:dokkaHtml/jsMain,:klogging:dokkaHtml/jvmMain,:klogging:dokkaHtml/wasmJsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-d-e-r-r.html"><span><span>STDERR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-448309005%2FProperties%2F-1582117039"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/androidMain" data-filterable-set=":klogging:dokkaHtml/androidMain" data-active="" data-toggle=":klogging:dokkaHtml/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain" data-toggle=":klogging:dokkaHtml/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/iosMain" data-filterable-set=":klogging:dokkaHtml/iosMain" data-toggle=":klogging:dokkaHtml/iosMain">ios</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/jsMain" data-filterable-set=":klogging:dokkaHtml/jsMain" data-toggle=":klogging:dokkaHtml/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/jvmMain" data-filterable-set=":klogging:dokkaHtml/jvmMain" data-toggle=":klogging:dokkaHtml/jvmMain">jvm</button><button class="platform-bookmark" data-filterable-current=":klogging:dokkaHtml/wasmJsMain" data-filterable-set=":klogging:dokkaHtml/wasmJsMain" data-toggle=":klogging:dokkaHtml/wasmJsMain">wasmJs</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-s-t-d-e-r-r.html">STDERR</a><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="-s-t-d-e-r-r.html">STDERR</a><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div><div class="brief "><p class="paragraph">Send an event rendered as a string to the standard error stream.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/iosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-s-t-d-e-r-r.html">STDERR</a><span class="token operator">: </span><span data-unresolved-link="io.klogging.sending/SendString///PointingToDeclaration/">SendString</span></div></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-s-t-d-e-r-r.html">STDERR</a><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-s-t-d-e-r-r.html">STDERR</a><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div></div><div class="content sourceset-dependent-content" data-togglable=":klogging:dokkaHtml/wasmJsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">val </span><a href="-s-t-d-e-r-r.html">STDERR</a><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-48792790%2FProperties%2F-972240762" anchor-label="STDOUT" id="-48792790%2FProperties%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-t-d-o-u-t.html"><span><span>STDOUT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-48792790%2FProperties%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-t-d-o-u-t.html">STDOUT</a><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div><div class="brief "><p class="paragraph">Send an event rendered as a string to the standard output stream.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="7925841%2FFunctions%2F-972240762" anchor-label="receiveBatch" id="7925841%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="receive-batch.html"><span>receive</span><wbr></wbr><span><span>Batch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="7925841%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="receive-batch.html">E</a><span class="token operator">&gt; </span><a href="receive-batch.html"><span class="token function">receiveBatch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">channel<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.channels/ReceiveChannel///PointingToDeclaration/">ReceiveChannel</span><span class="token operator">&lt;</span><a href="receive-batch.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">maxTimeMillis<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">maxSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="receive-batch.html">E</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Receive a batch of items from a channel, up to time and batch size limits.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1612435835%2FFunctions%2F-972240762" anchor-label="senderFrom" id="-1612435835%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sender-from.html"><span>sender</span><wbr></wbr><span><span>From</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1612435835%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="sender-from.html"><span class="token function">senderFrom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">renderer<span class="token operator">: </span><a href="../io.klogging.rendering/-render-string/index.html">RenderString</a><span class="token punctuation">, </span></span><span class="parameter ">sender<span class="token operator">: </span><a href="-send-string/index.html">SendString</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-event-sender/index.html">EventSender</a></div><div class="brief "><p class="paragraph">Convert a <a href="../io.klogging.rendering/-render-string/index.html">RenderString</a> and <a href="-send-string/index.html">SendString</a> into an <a href="-event-sender/index.html">EventSender</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="334794791%2FFunctions%2F-972240762" anchor-label="seqServer" id="334794791%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="seq-server.html"><span>seq</span><wbr></wbr><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="334794791%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="seq-server.html"><span class="token function">seqServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">checkCertificate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div><div class="brief "><p class="paragraph">Send a rendered string to a Seq server.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1968710518%2FFunctions%2F-972240762" anchor-label="splunkServer" id="-1968710518%2FFunctions%2F-972240762" data-filterable-set=":klogging:dokkaHtml/commonMain"></a>
+          <div class="table-row" data-filterable-current=":klogging:dokkaHtml/commonMain" data-filterable-set=":klogging:dokkaHtml/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="splunk-server.html"><span>splunk</span><wbr></wbr><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1968710518%2FFunctions%2F-972240762"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":klogging:dokkaHtml/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="splunk-server.html"><span class="token function">splunkServer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hecUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">hecToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">checkCertificate<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-send-string/index.html">SendString</a></div><div class="brief "><p class="paragraph">Creates a <a href="-send-string/index.html">SendString</a> function that sends an event string to a Splunk server using the HTTP Event Collector (HEC) API.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
-
